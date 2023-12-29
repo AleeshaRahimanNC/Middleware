@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Middleware</title>
     <style>
-        body{
+        body {
             margin: 30px;
             padding: 10px;
             border: 5px solid black;
@@ -17,7 +17,8 @@
 <body>
     <h1>Middleware</h1>
     <ul>
-        <li>Middleware is nothing but a function that has access to response objects, request objects, and the next middleware function.</li>
+        <li>Middleware is nothing but a function that has access to response objects, request objects, and the next
+            middleware function.</li>
         <li>It exists in between the request and response cycles of Node. JS execution.</li>
     </ul>
 
@@ -31,22 +32,34 @@
     </ol>
     <em><b>1. Application-level middleware:</b></em>
     <ul>
-        <li>In the application-level middleware, we consider an authentication middleware and how it can be created.</li>
+        <li>In the application-level middleware, we consider an authentication middleware and how it can be created.
+        </li>
         <li>When the user is not authenticated, it will not be possible to call the mentioned routes.</li>
-        <li>When it is necessary to build an authentication for every GET, POST call, the development of an authentication middleware will follow.</li>
-        <li>When you receive the authentication request, the authentication middleware makes progress towards the authentication code logic that is available inside it.</li>
+        <li>When it is necessary to build an authentication for every GET, POST call, the development of an
+            authentication middleware will follow.</li>
+        <li>When you receive the authentication request, the authentication middleware makes progress towards the
+            authentication code logic that is available inside it.</li>
         <li>Once the authentication is successful, the rest of the route can be called using the next function.</li>
-        <li>However, when it fails, you may not be able to perform the next route as the middleware will show errors.</li>
+        <li>However, when it fails, you may not be able to perform the next route as the middleware will show errors.
+        </li>
+        <h4>Example</h4>
+        <img src="./Example1.png" alt="Example">
     </ul>
+
+
     <em><b>2. Router-level middleware:</b></em>
     <ul>
-    <li>Router-level middleware is almost like the application-level middleware and works in the same way.</li>
-    <li>The difference is that it can generate and limit an instance using the Express.Router() function.</li>
-    <li>You can make use of the router.use() and router.METHOD() functions to load router-level middleware.</li>
+        <li>Router-level middleware is almost like the application-level middleware and works in the same way.</li>
+        <li>The difference is that it can generate and limit an instance using the Express.Router() function.</li>
+        <li>You can make use of the router.use() and router.METHOD() functions to load router-level middleware.</li>
+
+        <h4>Example</h4>
+        <img src="./Example2.png" alt="Example">
     </ul>
     <em><b>3. Build-in middleware:</b></em>
     <ul>
-        <li>The build-in middleware doesn't depend on the 'Connect' function and unlike the previous 4.X version types, Express now acts as a module.</li>
+        <li>The build-in middleware doesn't depend on the 'Connect' function and unlike the previous 4.X version types,
+            Express now acts as a module.</li>
         <li>Generally, under the Express types of middleware, you can utilize these listed middleware functions:
             <ol type="i">
                 <li>json - a function that computes the incoming request by adding JSON payloads.
@@ -54,21 +67,29 @@
                 <li>static - a function that acts as a static asset to the application.</li>
             </ol>
         </li>
-        
+
+        <h4>Example</h4>
+        <img src="./Example3.png" alt="Example">
     </ul>
     <em><b>4. Error-handling middleware:</b></em>
     <ul>
-        <li>Express.js is capable of handling any default errors and can also define error-handling middleware functions, which are similar to the other middleware functions.</li>
+        <li>Express.js is capable of handling any default errors and can also define error-handling middleware
+            functions, which are similar to the other middleware functions.</li>
         <li>The major difference is the error-handling functions.</li>
+
+        <h4>Example</h4>
+        <img src="./Example4.png" alt="Example">
     </ul>
     <em><b>5. Third-party middleware:</b></em>
     <ul>
         <li>Sometimes, you will need to have some additional features in the backend operations.</li>
-        <li>For that, you can install the Node.js module for the specific function and then apply the same to your application (either on the application or router level).</li>
-    </ul>
-    <h2>Middleware Example</h2>
-    <img src="./middleware_Example.png" alt="Example">
+        <li>For that, you can install the Node.js module for the specific function and then apply the same to your
+            application (either on the application or router level).</li>
 
+        <h4>Example</h4>
+        <img src="./Example5.png" alt="Example">
+    </ul>
+    
 </body>
 
 </html>
